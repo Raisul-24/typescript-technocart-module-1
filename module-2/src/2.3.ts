@@ -21,5 +21,13 @@
 
 
    type GenericTuple<a,b> = [a,b] ;
-   const userWithID :GenericTuple<number, {name: string, email: string}> = [1234, {name: 'Raisul', email: "a@a.com"}]
+   // const userWithID :GenericTuple<number, 
+   // {name: string, email: string}> = [1234, {name: 'Raisul', email: "a@a.com"}]
+
+  interface User {
+   name: string,
+   email: string,
+   age: number
+  }
+   const userWithID :GenericTuple<number, User> = [1234, {name: 'Raisul', email: "a@a.com", age: 23}]
 }
